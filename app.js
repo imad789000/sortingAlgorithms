@@ -57,7 +57,7 @@ async function bubbleSort()
     try{
         let colss = []
         Array.from(colsContainer.children).forEach(el => {
-            colss.push(parseInt(el.style.height))
+            colss.push(parseFloat(el.style.height))
         })
 
         //looping through through all elements of the list
@@ -165,7 +165,7 @@ async function sortHelper()
         colss.push(parseFloat(el.style.height))
     })
 
-    let sortedCols = await mergeSort(colss)
+    await mergeSort(colss)
     await doneEffect()
 }
 
